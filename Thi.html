@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="1000px" height="500px" style="border: solid 1px black"></canvas>
+<script>
+    // câu 1
+    // let testScore=[6,7,8,9];
+    // function findAvg(arr){
+    //     let sum=0;
+    //     for(let i=0; i< arr.length;i++){
+    //         sum = sum + arr[i];
+    //     }
+    //
+    //     return sum/arr.length;
+    // }
+    //
+    // câu 2
+    // function insertNumberToArray(arr,num,index){
+    //     if(index<0|| index>arr.length){
+    //         return arr;
+    //     }else {
+    //         arr.splice(index,0,num)
+    //         return arr
+    //     }
+    // }
+
+    // câu 3
+    function isPrime(n) {
+        if (n < 2) return false;
+        if (n < 4) return true;
+        if (n >= 4) {
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) return false;
+            }
+            return true;
+        }
+    }
+    function sumOfListPrime(n) {
+        sum = 0;
+        for (i=0; i <=n; i++) {
+            if (isPrime(i)) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+    console.log(sumOfListPrime(15))
+    // câu 4
+
+    // let canvas = document.getElementById("canvas").getContext("2d")
+    //
+    // canvas.beginPath()
+    // canvas.fillStyle = "#18c7cd"
+    // canvas.arc(10, 10, 100, 0, Math.PI*2)
+    // canvas.fill()
+    // // canvas.stroke()
+    //
+    //
+    // class Rectangle{
+    //     x
+    //     y
+    //     width
+    //     height
+    //     color
+    //     constructor(x,y,width,height,color) {
+    //         this.x = x
+    //         this.y = y
+    //         this.width = width
+    //         this.height = height
+    //         this.color = color
+    //     }
+    //     render(x,y,width,height,color){
+    //         canvas.beginPath()
+    //         canvas.fillStyle= color
+    //         canvas.fillRect(x,y,width,height)
+    //         canvas.stroke()
+    //         canvas.closePath()
+    //     }
+    // }
+    //
+    // let hcn = new Rectangle()
+    // hcn.render(200,200,300,100, "red")
+</script>
+
+</body>
+</html>
